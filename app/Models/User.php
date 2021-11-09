@@ -24,6 +24,11 @@ class User extends Authenticatable implements JWTSubject
         'password',
     ];
 
+    public function histories()
+    {
+        return $this->hasMany(History::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
